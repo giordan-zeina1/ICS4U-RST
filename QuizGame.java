@@ -14,7 +14,7 @@ public class QuizGame {
         Scanner inputScanner = new Scanner(System.in);
         
         System.out.println("--- Test Your Ball Knowledge ---");
-        System.out.println("Select Level: 1 (Easy), 2 (Medium), 3 (Hard)");
+        System.out.print("Select Level: 1 (Easy), 2 (Medium), 3 (Hard):");
         
         int difficultyLevel = inputScanner.nextInt();
 
