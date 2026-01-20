@@ -17,12 +17,12 @@ public class LevelThree {
                 "2. Mohamed Salah 🇪🇬👑",
                 "3. Sergio Kun Agüero 🇦🇷",
                 "4. Wayne Rooney 🏴󠁧󠁢󠁥󠁮󠁧󠁿"}, 2),
-            new Question("Which African footballer has the most Premier league"
-                + " goals in history?",
+            new Question("Which footballer is the only African footballer"
+                + " to win the Ballon D’or?",
             new String[]{"1. Mohamed Salah 🇪🇬👑",
-                "2. Sadio Mané 🇸🇳",
-                "3. Samuel Eto’o 🇨🇲",
-                "4. Didier Drogba 🇨🇮"}, 1),
+                "2. George Weah 🇸🇳",
+                "3. Yaya Toure 🇨🇲",
+                "4. Suleiman Obeid 🇨🇮"}, 2),
             new Question("What Club Did Mohamed Salah score his Puskas award"
                 + " winning goal against?",
             new String[]{"1. Manchester United 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
