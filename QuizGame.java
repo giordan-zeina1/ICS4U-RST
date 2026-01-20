@@ -16,31 +16,34 @@ public class QuizGame {
         System.out.println("--- Test Your Ball Knowledge ---");
         System.out.println("Select Level: 1 (Easy), 2 (Medium), 3 (Hard)");
         
-        int difficultySelection = inputScanner.nextInt();
-        Question currentQuestion = currentQuestion.get(questionNumber);
+        int difficultyLevel = inputScanner.nextInt();
 
         // Holds the current level
         final LevelOne one = new LevelOne();
         final LevelTwo two = new LevelTwo();
         final LevelThree three = new LevelThree();
 
+        List<Question> currentQuestions;
+
         // Chooses which questions to show
-        if (difficultySelection == 1) {
-            currentQuestion = LevelOne.getQuestions();
-        } else if (difficultySelection == 2) {
-            currentQuestion = LevelTwo.getQuestions();
+        if (difficultyLevel == 1) {
+            currentQuestions = LevelOne.getQuestions();
+        } else if (difficultyLevel == 2) {
+            currentQuestions = LevelTwo.getQuestions();
         } else {
-            currentQuestion = LevelThree.getQuestions();
+            currentQuestions = LevelThree.getQuestions();
         }
 
         int currentScore = 0;
 
         // Goes through the questions
-        for (int questionNumber = 0; questionNumber < currentQuestion.size();
+        for (int questionNumber = 0; questionNumber < currentQuestions.size();
                 questionNumber++) {
-
+            
+            Question currentQuestion = currentQuestions.get(questionNumber);
+            
             // Displays questions
-            System.out.println("\nQuestion " + (questionNumber + 1) + ": ",
+            System.out.println("\nQuestion " + (questionNumber + 1) + ": "
                 + currentQuestion.getPrompt());
             
             // Display options
@@ -61,7 +64,7 @@ public class QuizGame {
         }
 
         System.out.println("\n--- Your Results ---");
-        System.out.println("Final Score: " + currentScore + " out of " + currentQuestion.size());
+        System.out.println("Final Score: " + currentScore + " out of " + currentQuestions.size());
         
         inputScanner.close();
     }
